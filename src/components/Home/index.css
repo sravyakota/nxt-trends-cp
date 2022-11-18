@@ -1,0 +1,81 @@
+/* Write your CSS code here */
+.home-image {
+  width: 50%;
+}
+.home-image-lg {
+  display: none;
+}
+.details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+/* .details-container-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+} */
+.heading {
+  font-family: 'roboto';
+  font-weight: 800;
+  font-size: 38px;
+  color: #1e293b;
+  align-self: center;
+}
+.para {
+  color: #475569;
+  font-family: 'roboto';
+  /* font-weight: 800; */
+  font-size: 16px;
+  align-self: center;
+}
+.shop-now-button {
+  background-color: #0967d2;
+  height: 38px;
+  width: 140px;
+  border-radius: 10px;
+  padding: 5px;
+  color: #ffffff;
+  font-family: 'roboto';
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  align-self: center;
+  margin-top: 15px;
+}
+@media screen and (max-width: 767px) {
+  .details-container-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .home-image {
+    display: none;
+  }
+  .details-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-left: 100px;
+    /* margin-right: 100px; */
+  }
+  /* .details-container-inner {
+    width: 50%;
+  } */
+  .home-image-lg {
+    display: block;
+    width: 30%;
+    margin-right: 200px;
+  }
+}

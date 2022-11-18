@@ -1,0 +1,86 @@
+/* Write your CSS code here */
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  /* width: 90%;
+  justify-content: space-around;
+  align-items: center; */
+}
+
+.nav-logo {
+  width: 40%;
+  margin-top: 10px;
+}
+.nav-logo-container {
+  display: flex;
+  display: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.logout-logo-icon {
+  width: 30px;
+}
+.nav-items-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #e6f6ff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.nav-item-icons {
+  width: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-lg-items {
+    display: none;
+  }
+  .nav-lg-button {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-lg-items {
+    display: block;
+  }
+  .nav-item-icons {
+    display: none;
+  }
+  .nav-logo {
+    width: 25%;
+    /* margin-top: 10px; */
+  }
+  .logout-logo-icon {
+    display: none;
+  }
+  .nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .nav-items-container {
+    background-color: transparent;
+    width: 30%;
+    justify-content: space-around;
+  }
+  .nav-lg-button {
+    display: block;
+    background-color: #0967d2;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+  }
+}

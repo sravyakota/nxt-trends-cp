@@ -1,0 +1,84 @@
+/* Write your CSS code here */
+.login-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}
+.logo {
+  width: 50%;
+  align-self: center;
+  margin-bottom: 50px;
+}
+.display-logo {
+  display: none;
+}
+.login-image {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+  /* margin: 5px; */
+}
+.inputs {
+  height: 34px;
+  background-color: #d7dfe9;
+  color: #64748b;
+  border: none;
+  outline: none;
+}
+.label-headings {
+  color: #475569;
+  font-family: 'roboto';
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+.login-button {
+  background-color: #0b69ff;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  height: 38px;
+  border: none;
+  outline: none;
+  margin-top: 30px;
+  font-family: 'roboto';
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .login-page-container {
+    /* display: flex; */
+    flex-direction: row;
+
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    height: 100vh;
+  }
+  .display-logo {
+    display: flex;
+    align-self: center;
+
+    width: 50%;
+  }
+  .logo {
+    display: none;
+  }
+  .login-image {
+    width: 50%;
+    /* margin-bottom: 30px; */
+  }
+  .card {
+    box-shadow: 0px 4px 16px 0px #bfbfbf;
+    padding: 50px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+}
