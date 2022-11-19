@@ -3,7 +3,7 @@ import {Component} from 'react'
 import './index.css'
 
 class LoginForm extends Component {
-  state = {name: '', pwd: ''}
+  state = {name: '', pwd: '', msg: ''}
 
   //   onSubmitForm = async event => {
   //     event.preventDefault()
@@ -20,11 +20,17 @@ class LoginForm extends Component {
   //     console.log(data)
   //   }
 
+  renderHomeRoute = () => {
+    const {history} = this.props
+    history.replace('/')
+  }
+
   onSubmitForm = async event => {
     event.preventDefault()
     console.log('clicked')
     const {name, pwd} = this.state
-    const userDetails = {name, pwd}
+    const userDetails = {username: name, password: pwd}
+    console.log(name, pwd)
 
     const url = `https://apis.ccbp.in/login`
     const options = {
@@ -35,6 +41,12 @@ class LoginForm extends Component {
     console.log(response)
     const data = await response.json()
     console.log(data)
+    if (response.ok === true) {
+      this.renderHomeRoute()
+    } else {
+      console.log(data.error_msg)
+      this.setState({msg: data.error_msg})
+    }
   }
 
   onChangeName = event => {
@@ -46,7 +58,8 @@ class LoginForm extends Component {
   }
 
   render() {
-    const {name, pwd} = this.state
+    const {name, pwd, msg} = this.state
+
     return (
       <div className="login-page-container">
         <img
@@ -91,9 +104,11 @@ class LoginForm extends Component {
               placeholder="Password"
             />
           </div>
+
           <button type="submit" className="login-button">
             Login
           </button>
+          <p className="error-msg">{msg}</p>
         </form>
       </div>
     )

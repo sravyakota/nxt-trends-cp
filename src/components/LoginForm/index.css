@@ -5,6 +5,11 @@
   justify-content: center;
   padding: 30px;
 }
+.error-msg {
+  font-size: 10px;
+  font-family: 'roboto';
+  color: red;
+}
 .logo {
   width: 50%;
   align-self: center;
